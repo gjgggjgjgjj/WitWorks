@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'techniques/exagerate.dart';
 
 class HumorTechniquesScreen extends StatelessWidget {
   const HumorTechniquesScreen({super.key});
@@ -49,9 +50,18 @@ class HumorTechniquesScreen extends StatelessWidget {
               // PLACEHOLDER: Swap your image paths/network links here easily later
               imagePath: null, 
               onTap: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('Selected ${techniques[index]}')),
-                );
+                if (index == 0) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const TechniquePracticeScreen(),
+                    ),
+                  );
+                } else {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Selected ${techniques[index]}')),
+                  );
+                }
               },
             ),
           );
