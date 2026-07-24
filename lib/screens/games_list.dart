@@ -54,7 +54,7 @@ class HumorTechniquesScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const TechniquePracticeScreen(),
+                      builder: (context) => exagerateGameScreen,
                     ),
                   );
                 } else {
