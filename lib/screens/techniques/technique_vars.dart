@@ -6,3 +6,6 @@ var twoDetailPaintScreen = TechniquePracticeScreen(keymap: detailPaintMap, instr
 
 var metaphorUseScreen = TechniquePracticeScreen(keymap: metaphorMap, instruction: 
       "Given said metaphor how can you complete it in a unique way");
+
+var stickLabelScreen = TechniquePracticeScreen(keymap: stickLabelMap, instruction: 
+      "Stick some phat label to complex things using specific words");

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:i_funny_flutterapp/screens/techniques/technique_vars.dart';
+import 'package:i_funny_flutterapp/screens/widgets/lesson_pretech_blueprint.dart';
 import 'techniques/exagerate.dart';
+import '../db/game_list_map.dart';
 
 class HumorTechniquesScreen extends StatelessWidget {
   const HumorTechniquesScreen({super.key});
@@ -57,11 +60,44 @@ class HumorTechniquesScreen extends StatelessWidget {
                       builder: (context) => exagerateGameScreen,
                     ),
                   );
+                }
+                else if (index == 1) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => metaphorUseScreen,
+                    ),
+                  );
+                }
+
+                else if (index == 2) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TechniqueOverviewScreen(keymap: metaphorMap),
+                    ),
+                  );
+                }
+
+                /*
+                else if (index == 3) {
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => foo,
+                    ),
+                  );
+                }
+                else if (index == 4) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => foo,
+                    ),
+                );
+
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(content: Text('Selected ${techniques[index]}')),
                   );
                 }
+                */
               },
             ),
           );
